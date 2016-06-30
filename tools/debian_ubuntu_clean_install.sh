@@ -13,6 +13,12 @@ then
     apt-get update
 fi
 
+wget http://http.kali.org/kali/pool/main/libj/libjpeg-turbo/libjpeg62-turbo_1.4.1-2_amd64.deb
+wget http://ftp.br.debian.org/debian/pool/main/libj/libjpeg6b/libjpeg62_6b2-2_amd64.deb
+sudo dpkg --install --recursive --auto-deconfigure libjpeg62-turbo_1.4.1-2_amd64.deb
+apt-get update
+sudo apt-get -f install	
+
 apt-get -y install curl g++ pkg-config libgdiplus libunwind8 libssl-dev make mono-complete gettext libssl-dev libcurl4-openssl-dev zlib1g libicu-dev uuid-dev unzip
 
 # download and build Node.js
